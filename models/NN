@@ -1,0 +1,6 @@
+import sqlite3
+import pandas as pd
+con = sqlite3.connect("../unified_CD2.db")
+cur = con.cursor()
+
+df = pd.read_sql_query("SELECT * FROM prod_desc", con)
